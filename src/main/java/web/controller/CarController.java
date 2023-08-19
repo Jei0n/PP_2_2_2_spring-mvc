@@ -15,10 +15,10 @@ import java.util.List;
 public class CarController {
 
 
-    private final CarServiceImp carService;
+    private final CarService carService;
 
     @Autowired
-    public CarController (CarServiceImp carService) {this.carService = carService;}
+    public CarController (CarService carService) {this.carService = carService;}
 
     @GetMapping("/cars")
     public String getCars(@RequestParam (defaultValue = "5") int count, Model model) {
